@@ -61,7 +61,7 @@ bluetooth.onUartDataReceived(serial.delimiters(Delimiters.Dollar), function () {
 function washClothes (stringData: string) {
     servos.P1.run(parseFloat(stringData))
     basic.pause(2000)
-    servos.P1.run(parseFloat(stringData))
+    servos.P1.run(-50)
     basic.pause(2000)
     servos.P1.stop()
 }
