@@ -61,7 +61,7 @@ function uART2RatioSuccess (stringData: string) {
 }
 // send values from 0-180
 function uART2ContinuousServo (stringData: string) {
-    basic.showIcon(IconNames.SmallSquare)
+    basic.showIcon(IconNames.StickFigure)
     servos.P1.run(parseFloat(stringData))
 }
 bluetooth.onBluetoothConnected(function () {

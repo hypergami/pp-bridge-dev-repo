@@ -1,5 +1,5 @@
 {
-    "name": "PP-bridge-dev-repo",
+    "name": "PP-bridge",
     "description": "",
     "dependencies": {
         "core": "*",
