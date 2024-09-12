@@ -48,6 +48,8 @@ bluetooth.onUartDataReceived(serial.delimiters(Delimiters.Dollar), function () {
         dataReceived = UARTString.split(":")
         UARTString = dataReceived.pop()
         uART2ContinuousServo(UARTString)
+    } else if (UARTString.includes("wash")) {
+        basic.showIcon(IconNames.Heart)
     } else {
         uART2LEDMatrix(UARTString)
     }
