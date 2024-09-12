@@ -52,6 +52,10 @@ bluetooth.onUartDataReceived(serial.delimiters(Delimiters.Dollar), function () {
         uART2LEDMatrix(UARTString)
     }
 })
+// add a new function
+function washClothes (stringData: string) {
+    servos.P1.run(parseFloat(stringData))
+}
 function uART2RatioSuccess (stringData: string) {
     if (stringData == "success") {
         basic.showIcon(IconNames.Happy)
