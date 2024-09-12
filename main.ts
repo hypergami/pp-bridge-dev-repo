@@ -59,11 +59,13 @@ bluetooth.onUartDataReceived(serial.delimiters(Delimiters.Dollar), function () {
 })
 // add a new function
 function washClothes (stringData: string) {
+    pins.digitalWritePin(DigitalPin.P0, 1)
     servos.P1.run(parseFloat(stringData))
     basic.pause(2000)
     servos.P1.run(-50)
     basic.pause(2000)
     servos.P1.stop()
+    pins.digitalWritePin(DigitalPin.P0, 0)
 }
 function uART2RatioSuccess (stringData: string) {
     if (stringData == "success") {
