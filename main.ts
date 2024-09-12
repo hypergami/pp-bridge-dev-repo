@@ -60,6 +60,10 @@ bluetooth.onUartDataReceived(serial.delimiters(Delimiters.Dollar), function () {
 // add a new function
 function washClothes (stringData: string) {
     servos.P1.run(parseFloat(stringData))
+    basic.pause(2000)
+    servos.P1.run(parseFloat(stringData))
+    basic.pause(2000)
+    servos.P1.stop()
 }
 function uART2RatioSuccess (stringData: string) {
     if (stringData == "success") {
